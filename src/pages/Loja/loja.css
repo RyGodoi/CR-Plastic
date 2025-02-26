@@ -48,8 +48,16 @@
   color: #00b3ff;
   font-size: 1.3em;
 }
-.LojaContainer:hover {
-}
 .LojaContainer img {
   width: 100px;
+}
+
+@media (max-width: 400px) {
+  .LojaContainer a {
+    font-size: 0.8em;
+  }
+  .LojaContainer a:hover {
+    color: #00b3ff;
+    font-size: 1em;
+  }
 }

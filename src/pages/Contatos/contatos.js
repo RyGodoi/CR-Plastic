@@ -44,14 +44,14 @@ const Contatos = () => {
 
   return (
     <div>
-      <header className="sobreNos" data-aos="fade-rigth">
+      <header className="sobreNos">
         <h1>Contatos, Fale Conosco</h1>
         <div></div>
         <NavLink to="/" className="headerLink">
           Inicio
         </NavLink>
       </header>
-      <section className="DetalhesSectionContatos" data-aos="fade-up">
+      <section className="DetalhesSectionContatos">
         <div className="Contatos-container">
           <h1 className="Contatos-title">Contato</h1>
 
@@ -92,7 +92,7 @@ const Contatos = () => {
           ></iframe>
         </div>
       </section>
-      <section className="sobreNos-FaleConosco" data-aos="fade-up">
+      <section className="sobreNos-FaleConosco">
         <div>
           <h2>Fale Conosco</h2>
           <p>Estamos sempre prontos para melhor atendê-los.</p>

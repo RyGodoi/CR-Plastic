@@ -10,14 +10,14 @@ import WhatsApp from "../../assets/WhatsApp.png";
 const About = () => {
   return (
     <div>
-      <header className="sobreNos" data-aos="fade-rigth">
+      <header className="sobreNos">
         <h1>Compromisso com Qualidade e Inovação</h1>
         <div></div>
         <NavLink to="/" className="headerLink">
           Inicio
         </NavLink>
       </header>
-      <section className="sobreNos-Section01" data-aos="fade-up">
+      <section className="sobreNos-Section01">
         <div className="sobreNos-div01-container">
           <span>CONHEÇA NOSSA EMPRESA</span>
           <h2>Sobre Nós</h2>
@@ -41,7 +41,7 @@ const About = () => {
           <img src={Extrusora} alt="" />
         </div>
       </section>
-      <section className="section03" data-aos="fade-up">
+      <section className="section03">
         <div className="cards">
           <FaBellConcierge fontSize={100} color="#008bc8" />
           <h2>Rápido atendimento</h2>
@@ -71,7 +71,7 @@ const About = () => {
         </div>
       </section>
       <br />
-      <section className="sobreNos-FaleConosco" data-aos="fade-up">
+      <section className="sobreNos-FaleConosco">
         <div>
           <h2>Fale Conosco</h2>
           <p>Estamos sempre prontos para melhor atendê-los.</p>

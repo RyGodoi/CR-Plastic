@@ -41,7 +41,7 @@ const Home = () => {
 
   return (
     <div>
-      <header data-aos="fade-up">
+      <header>
         <Swiper
           modules={[EffectFade]}
           spaceBetween={50}
@@ -72,7 +72,7 @@ const Home = () => {
       </header>
       <br />
       <section className="Section01">
-        <div className="divContainer" data-aos="fade-down">
+        <div className="divContainer">
           <div className="div01">
             <span>Em destaque</span>
             <h2>Produtos</h2>
@@ -90,7 +90,7 @@ const Home = () => {
             Saiba Mais
           </NavLink>
         </div>
-        <div className="divContainer" data-aos="fade-up">
+        <div className="divContainer">
           <Swiper
             pagination={{
               dynamicBullets: true,
@@ -115,10 +115,10 @@ const Home = () => {
       </section>
       <br />
       <section className="Section02">
-        <div className="divContainer" data-aos="fade-right">
+        <div className="divContainer">
           <img src={Section} alt="Extrusora de plastico PE" />
         </div>
-        <div className="divContainer" data-aos="fade-up">
+        <div className="divContainer">
           <div className="section-div01">
             <span>Em destaque</span>
             <h2>Sobre nós</h2>
@@ -140,7 +140,7 @@ const Home = () => {
         </div>
         <div></div>
       </section>
-      <section className="section03" data-aos="fade-up">
+      <section className="section03">
         <div className="cards">
           <FaBellConcierge fontSize={100} color="#008bc8" />
           <h2>Rápido atendimento</h2>
@@ -170,7 +170,7 @@ const Home = () => {
         </div>
       </section>
       <br />
-      <section className="section04" data-aos="fade-up">
+      <section className="section04">
         <h2>Galeria</h2>
         <div className="gallery-container">
           {selectedImage && (
@@ -200,7 +200,7 @@ const Home = () => {
         </NavLink>
       </section>
       <br />
-      <section className="section05" data-aos="fade-down">
+      <section className="section05">
         <div className="divContainer">
           <div className="section-div01">
             <span>Confira Nossas</span>

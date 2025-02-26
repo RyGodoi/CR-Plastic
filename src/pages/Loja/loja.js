@@ -8,7 +8,7 @@ import NuvemShop from "../../assets/NuvemShopLogo.png";
 const Loja = () => {
   return (
     <div>
-      <header className="sobreNos" data-aos="fade-rigth">
+      <header className="sobreNos">
         <h1>Conheça nossas Lojas de vendas</h1>
         <div></div>
         <NavLink to="/" className="headerLink">

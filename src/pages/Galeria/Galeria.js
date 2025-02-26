@@ -22,7 +22,7 @@ const Galeria = () => {
   }
   return (
     <div>
-      <header className="sobreNos" data-aos="fade-rigth">
+      <header className="sobreNos">
         <h1>Galeria C&R Plastic</h1>
         <div></div>
         <NavLink to="/" className="headerLink">
@@ -45,7 +45,6 @@ const Galeria = () => {
               <div
                 key={index}
                 className="card"
-                data-aos="fade-up"
                 style={{
                   backgroundImage: `url(${image.img})`, // Aqui deve ser image.img e não apenas image
                   backgroundSize: "cover",

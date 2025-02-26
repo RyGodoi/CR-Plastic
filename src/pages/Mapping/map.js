@@ -6,7 +6,7 @@ import "./map.css";
 const About = () => {
   return (
     <div>
-      <header className="sobreNos" data-aos="fade-rigth">
+      <header className="sobreNos">
         <h1>Mapa do Site</h1>
         <div></div>
         <NavLink to="/" className="headerLink">

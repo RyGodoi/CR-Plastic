@@ -25,7 +25,6 @@ const Produtos = () => {
               key={index}
               to={`/detalhes/${item.link}`}
               className="produtosCards"
-              data-aos="fade-up"
             >
               <div className="produtosInfo">
                 <img src={item.img} alt={item.title} />
@@ -50,7 +49,7 @@ const Produtos = () => {
         </div>
       </section>
       <br />
-      <section className="sobreNos-FaleConosco" data-aos="fade-up">
+      <section className="sobreNos-FaleConosco">
         <div>
           <h2>Fale Conosco</h2>
           <p>Estamos sempre prontos para melhor atendê-los.</p>

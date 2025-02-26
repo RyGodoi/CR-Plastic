@@ -45,6 +45,7 @@ const Galeria = () => {
               <div
                 key={index}
                 className="card"
+                data-aos="fade-up"
                 style={{
                   backgroundImage: `url(${image.img})`, // Aqui deve ser image.img e não apenas image
                   backgroundSize: "cover",

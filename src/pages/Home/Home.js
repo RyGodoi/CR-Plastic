@@ -3,7 +3,6 @@ import { useState, useEffect } from "react";
 import { Swiper, SwiperSlide } from "swiper/react";
 import { Slides, Cards, Gallery } from "../../listObjects/dados";
 import { NavLink } from "react-router-dom";
-import { EffectCards } from "swiper/modules";
 import { FaBellConcierge } from "react-icons/fa6";
 import { FaStar } from "react-icons/fa6";
 import { FaUserCheck } from "react-icons/fa6";
@@ -13,6 +12,9 @@ import { EffectFade } from "swiper/modules";
 import redesSociais from "../../assets/redesSociais.png";
 import AOS from "aos";
 import "aos/dist/aos.css";
+
+// import required modules
+import { Pagination } from "swiper/modules";
 
 const Home = () => {
   const [selectedImage, setSelectedImage] = useState(null);
@@ -69,7 +71,7 @@ const Home = () => {
         </Swiper>
       </header>
       <br />
-      <section data-aos="zoom-in" className="Section01">
+      <section className="Section01">
         <div className="divContainer" data-aos="fade-down">
           <div className="div01">
             <span>Em destaque</span>
@@ -89,22 +91,26 @@ const Home = () => {
           </NavLink>
         </div>
         <div className="divContainer" data-aos="fade-up">
-          <div className="Cards">
-            <Swiper
-              effect={"cards"}
-              grabCursor={true}
-              modules={[EffectCards]}
-              className="mySwiper"
-            >
-              {cards.map((item, index) => (
-                <SwiperSlide key={index}>
-                  {item.title}
+          <Swiper
+            pagination={{
+              dynamicBullets: true,
+            }}
+            modules={[Pagination]}
+            className="mySwiper"
+            loop={true}
+            autoplay={true}
+            effect={"fade"}
+          >
+            {cards.map((item, index) => (
+              <div key={index}>
+                <SwiperSlide>
+                  <h2>{item.title}</h2>
                   <img src={item.img} alt={item.title} />
                   <p>{item.descricao}</p>
                 </SwiperSlide>
-              ))}
-            </Swiper>
-          </div>
+              </div>
+            ))}
+          </Swiper>
         </div>
       </section>
       <br />
@@ -112,7 +118,7 @@ const Home = () => {
         <div className="divContainer" data-aos="fade-right">
           <img src={Section} alt="Extrusora de plastico PE" />
         </div>
-        <div className="divContainer" data-aos="fade-left">
+        <div className="divContainer" data-aos="fade-up">
           <div className="section-div01">
             <span>Em destaque</span>
             <h2>Sobre nós</h2>
@@ -132,8 +138,9 @@ const Home = () => {
             Saiba Mais
           </NavLink>
         </div>
+        <div></div>
       </section>
-      <section className="section03" data-aos="zoom-out">
+      <section className="section03" data-aos="fade-up">
         <div className="cards">
           <FaBellConcierge fontSize={100} color="#008bc8" />
           <h2>Rápido atendimento</h2>
@@ -163,7 +170,7 @@ const Home = () => {
         </div>
       </section>
       <br />
-      <section className="section04">
+      <section className="section04" data-aos="fade-up">
         <h2>Galeria</h2>
         <div className="gallery-container">
           {selectedImage && (
@@ -194,7 +201,7 @@ const Home = () => {
       </section>
       <br />
       <section className="section05" data-aos="fade-down">
-        <div className="divContainer" data-aos="fade-left">
+        <div className="divContainer">
           <div className="section-div01">
             <span>Confira Nossas</span>
             <h2>Redes Socais</h2>
@@ -223,7 +230,7 @@ const Home = () => {
             </a>
           </div>
         </div>
-        <div className="divContainer" data-aos="fade-left">
+        <div className="divContainer">
           <img src={redesSociais} alt="" />
         </div>
       </section>

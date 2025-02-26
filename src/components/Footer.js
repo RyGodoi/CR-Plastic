@@ -22,7 +22,7 @@ const Footer = () => {
               isActive ? Styles.active : Styles.cor
             }
           >
-            Inicio
+            <p>Inicio</p>
           </NavLink>
 
           <NavLink
@@ -31,7 +31,7 @@ const Footer = () => {
               isActive ? Styles.active : Styles.cor
             }
           >
-            Sobre nós
+            <p>Sobre nós</p>
           </NavLink>
 
           <NavLink
@@ -40,7 +40,7 @@ const Footer = () => {
               isActive ? Styles.active : Styles.cor
             }
           >
-            Produtos
+            <p>Produtos</p>
           </NavLink>
 
           <NavLink
@@ -49,7 +49,7 @@ const Footer = () => {
               isActive ? Styles.active : Styles.cor
             }
           >
-            Galeria
+            <p>Galeria</p>
           </NavLink>
           <NavLink
             to="/contatos"
@@ -57,7 +57,7 @@ const Footer = () => {
               isActive ? Styles.active : Styles.cor
             }
           >
-            Contatos
+            <p>Contatos</p>
           </NavLink>
           <NavLink
             to="/loja"
@@ -65,7 +65,7 @@ const Footer = () => {
               isActive ? Styles.active : Styles.cor
             }
           >
-            Compre Agora !
+            <p>Compre Agora !</p>
           </NavLink>
           <NavLink
             to="/mapping"
@@ -73,7 +73,7 @@ const Footer = () => {
               isActive ? Styles.active : Styles.cor
             }
           >
-            Mapa do Site
+            <p>Mapa do Site</p>
           </NavLink>
         </div>
         <div>

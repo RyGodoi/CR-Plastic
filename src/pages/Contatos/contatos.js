@@ -51,7 +51,7 @@ const Contatos = () => {
           Inicio
         </NavLink>
       </header>
-      <section className="DetalhesSectionContatos">
+      <section className="DetalhesSectionContatos" data-aos="fade-up">
         <div className="Contatos-container">
           <h1 className="Contatos-title">Contato</h1>
 
@@ -82,7 +82,7 @@ const Contatos = () => {
             <input className="Contatos-button" type="submit" value="Enviar" />
           </form>
         </div>
-        <div className="divMaps">
+        <div className="Contatos-container">
           <iframe
             className="maps"
             src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d913.8931573251112!2d-46.502991430433994!3d-23.619655369918046!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x94ce680965409141%3A0x7c17a1ceb9660a89!2sR.%20Ant%C3%B4nio%20de%20Fran%C3%A7a%20e%20Silva%2C%20565%20-%20Sapopemba%2C%20S%C3%A3o%20Paulo%20-%20SP%2C%2003978-540!5e0!3m2!1sen!2sbr!4v1740439828825!5m2!1sen!2sbr"
@@ -92,7 +92,7 @@ const Contatos = () => {
           ></iframe>
         </div>
       </section>
-      <section className="sobreNos-FaleConosco">
+      <section className="sobreNos-FaleConosco" data-aos="fade-up">
         <div>
           <h2>Fale Conosco</h2>
           <p>Estamos sempre prontos para melhor atendê-los.</p>

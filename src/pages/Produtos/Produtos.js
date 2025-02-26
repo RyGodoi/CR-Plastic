@@ -11,7 +11,7 @@ const Produtos = () => {
 
   return (
     <div>
-      <header className="sobreNos" data-aos="fade-rigth">
+      <header className="sobreNos">
         <h1>Produtos C&R Plastic - Variedade em Embalagens Plásticas</h1>
         <div></div>
         <NavLink to="/" className="headerLink">
@@ -19,12 +19,13 @@ const Produtos = () => {
         </NavLink>
       </header>
       <section>
-        <div className="produtosCardsContainer" data-aos="zoom-out">
+        <div className="produtosCardsContainer">
           {produtosCards.map((item, index) => (
             <NavLink
               key={index}
               to={`/detalhes/${item.link}`}
               className="produtosCards"
+              data-aos="fade-up"
             >
               <div className="produtosInfo">
                 <img src={item.img} alt={item.title} />
@@ -49,7 +50,7 @@ const Produtos = () => {
         </div>
       </section>
       <br />
-      <section className="sobreNos-FaleConosco">
+      <section className="sobreNos-FaleConosco" data-aos="fade-up">
         <div>
           <h2>Fale Conosco</h2>
           <p>Estamos sempre prontos para melhor atendê-los.</p>

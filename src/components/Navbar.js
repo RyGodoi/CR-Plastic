@@ -73,7 +73,7 @@ const Navbar = () => {
               isActive ? Styles.active : Styles.cor
             }
           >
-            Contato
+            Contatos
           </NavLink>
         </li>
         <li>
@@ -112,7 +112,12 @@ const Navbar = () => {
           </li>
           <li>
             <NavLink to="/contatos" onClick={closeMenu}>
-              Contato
+              Contatos
+            </NavLink>
+          </li>
+          <li>
+            <NavLink to="/loja" onClick={closeMenu}>
+              Compre Agora !
             </NavLink>
           </li>
         </ul>

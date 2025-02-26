@@ -1,0 +1,34 @@
+.SectionMap {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 40px 0;
+  background-color: white;
+}
+.MapContainer {
+  width: 90%;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+.MapRouter {
+  color: black;
+  font-weight: bold;
+  font-size: 1.2em;
+  margin: 10px 30px;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  list-style: none;
+  background-color: rgb(241, 241, 241);
+  padding: 10px 20px;
+  border-radius: 10px;
+  border: 2px #008bc8 solid;
+
+  transition: transform 0.2s;
+}
+.MapRouter:hover {
+  transform: scale(1.1);
+  color: #008bc8;
+}

@@ -41,7 +41,7 @@ const About = () => {
           <img src={Extrusora} alt="" />
         </div>
       </section>
-      <section className="section03" data-aos="zoom-out">
+      <section className="section03" data-aos="fade-up">
         <div className="cards">
           <FaBellConcierge fontSize={100} color="#008bc8" />
           <h2>Rápido atendimento</h2>
@@ -71,7 +71,7 @@ const About = () => {
         </div>
       </section>
       <br />
-      <section className="sobreNos-FaleConosco">
+      <section className="sobreNos-FaleConosco" data-aos="fade-up">
         <div>
           <h2>Fale Conosco</h2>
           <p>Estamos sempre prontos para melhor atendê-los.</p>

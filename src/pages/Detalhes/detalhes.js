@@ -3,6 +3,7 @@ import { useParams } from "react-router-dom";
 import { ProdutosCards } from "../../listObjects/dados";
 import "./Detalhes.css";
 import WhatsApp from "../../assets/WhatsApp.png";
+import emailjs from "@emailjs/browser";
 
 const Detalhes = () => {
   const { produtoId } = useParams();
@@ -10,6 +11,43 @@ const Detalhes = () => {
   // Encontrar o produto correspondente pelo link
   const produto = ProdutosCards.find((item) => item.link === produtoId);
   const [openIndex, setOpenIndex] = useState(null);
+
+  const [name, setName] = useState("");
+  const [email, setEmail] = useState("");
+  const [message, setMessage] = useState("");
+
+  function sendEmail(e) {
+    e.preventDefault();
+    if (name === "" || email === "" || message === "") {
+      alert("Preencha todos os campos");
+      return;
+    }
+    const templateParams = {
+      fromname: name,
+      message: message,
+      email: email,
+    };
+
+    emailjs
+      .send(
+        "service_k2b0j1n",
+        "template_hu876v7",
+        templateParams,
+        "g1kYJZYkjHPMZ1tlF"
+      )
+      .then(
+        (response) => {
+          console.log("EMAIL ENVIADO", response.status, response.text);
+          setEmail("");
+          setName("");
+          setMessage("");
+          alert("Email enviado com sucesso!");
+        },
+        (err) => {
+          console.log("ERRO: ", err);
+        }
+      );
+  }
 
   const toggleAccordion = (index) => {
     setOpenIndex(openIndex === index ? null : index);
@@ -24,6 +62,7 @@ const Detalhes = () => {
   if (!produto) {
     return <h2>Produto não encontrado!</h2>;
   }
+
   return (
     <div>
       <header className="sobreNos">
@@ -47,23 +86,55 @@ const Detalhes = () => {
         </div>
       </section>
       <br />
-      <section className="DetalhesSection02">
-        <h2>Perguntas Frequentes</h2>
-        <div className="space-y-2">
-          {faqs.map((faq, index) => (
-            <div key={index} className="box-1">
-              <button
-                className="btnDetalhes"
-                onClick={() => toggleAccordion(index)}
-              >
-                <span>{faq.question} </span>
-                <span>{openIndex === index ? "▲" : "▼"}</span>
-              </button>
-              {openIndex === index && (
-                <div className="destalhesRespotas">{faq.answer}</div>
-              )}
-            </div>
-          ))}
+      <section className="sectionDetalhes">
+        <div className="DetalhesSection02">
+          <h2>Perguntas Frequentes</h2>
+          <div className="space-y-2">
+            {faqs.map((faq, index) => (
+              <div key={index} className="box-1">
+                <button
+                  className="btnDetalhes"
+                  onClick={() => toggleAccordion(index)}
+                >
+                  <span>{faq.question} </span>
+                  <span>{openIndex === index ? "▲" : "▼"}</span>
+                </button>
+                {openIndex === index && (
+                  <div className="destalhesRespotas">{faq.answer}</div>
+                )}
+              </div>
+            ))}
+          </div>
+        </div>
+        <div className="Contatos-container">
+          <h1 className="Contatos-title">Contato</h1>
+
+          <form className="Contatos-form" onSubmit={sendEmail}>
+            <input
+              className="Contatos-input"
+              type="text"
+              placeholder="Digite seu nome"
+              onChange={(e) => setName(e.target.value)}
+              value={name}
+            />
+
+            <input
+              className="Contatos-input"
+              type="text"
+              placeholder="Digite seu email"
+              onChange={(e) => setEmail(e.target.value)}
+              value={email}
+            />
+
+            <textarea
+              className="Contatos-textarea"
+              placeholder="Digite sua mensagem..."
+              onChange={(e) => setMessage(e.target.value)}
+              value={message}
+            />
+
+            <input className="Contatos-button" type="submit" value="Enviar" />
+          </form>
         </div>
       </section>
       <section className="sobreNos-FaleConosco">

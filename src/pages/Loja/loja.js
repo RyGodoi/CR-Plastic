@@ -16,25 +16,41 @@ const Loja = () => {
         </NavLink>
       </header>
       <div className="LojaRedesSociais LojaContainer">
-        <a href="#">
+        <a
+          target="_blank"
+          rel="noopener noreferrer"
+          href="https://api.whatsapp.com/send?phone=5511964000352&text=Ol%C3%A1,%20vim%20pelo%20seu%20Site"
+        >
           <img src={RedesSociais} alt="" />
           <h2>Entre em contato agora!</h2>
         </a>
       </div>
       <div className="LojaMercadoLivre LojaContainer">
-        <a href="#">
+        <a
+          target="_blank"
+          rel="noopener noreferrer"
+          href="https://api.whatsapp.com/send?phone=5511964000352&text=Ol%C3%A1,%20vim%20pelo%20seu%20Site"
+        >
           <img src={MercadoLivre} alt="" />
           <h2>Loja Mercado Livre</h2>
         </a>
       </div>
       <div className="LojaShopee LojaContainer">
-        <a href="#">
+        <a
+          target="_blank"
+          rel="noopener noreferrer"
+          href="https://api.whatsapp.com/send?phone=5511964000352&text=Ol%C3%A1,%20vim%20pelo%20seu%20Site"
+        >
           <img src={Shopee} alt="" />
           <h2>Loja Shopee</h2>
         </a>
       </div>
       <div className="LojaNuvemShop LojaContainer">
-        <a href="#">
+        <a
+          target="_blank"
+          rel="noopener noreferrer"
+          href="https://api.whatsapp.com/send?phone=5511964000352&text=Ol%C3%A1,%20vim%20pelo%20seu%20Site"
+        >
           <img src={NuvemShop} alt="" />
           <h2>Entre em contato agora!</h2>
         </a>

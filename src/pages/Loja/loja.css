@@ -1,0 +1,55 @@
+.LojaRedesSociais {
+  background-image: url("../../assets/RedesSociais02.png"); /* Substitua pela sua imagem */
+  width: 100%;
+  background-attachment: fixed; /* Mantém a imagem fixa ao rolar */
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  margin: 15px 0;
+}
+.LojaMercadoLivre {
+  background-image: url("../../assets/MercadoLivre.jpg"); /* Substitua pela sua imagem */
+  width: 100%;
+  background-attachment: fixed; /* Mantém a imagem fixa ao rolar */
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  margin: 15px 0;
+}
+.LojaShopee {
+  background-image: url("../../assets/Shopee.jpg"); /* Substitua pela sua imagem */
+  width: 100%;
+  background-attachment: fixed; /* Mantém a imagem fixa ao rolar */
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  margin: 15px 0;
+}
+.LojaNuvemShop {
+  background-image: url("../../assets/NuvemShop.jpg"); /* Substitua pela sua imagem */
+  width: 100%;
+  background-attachment: fixed; /* Mantém a imagem fixa ao rolar */
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  margin: 15px 0;
+}
+.LojaContainer a {
+  width: 100%;
+  display: flex;
+  justify-content: space-around;
+  color: white;
+  background-color: rgba(0, 0, 0, 0.586);
+  padding: 60px 0;
+  transition: 0.2s;
+  font-size: 1em;
+}
+.LojaContainer a:hover {
+  color: #00b3ff;
+  font-size: 1.3em;
+}
+.LojaContainer:hover {
+}
+.LojaContainer img {
+  width: 100px;
+}
